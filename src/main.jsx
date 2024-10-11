@@ -38,17 +38,17 @@ const Applayout = ()=>{
           <div>
             <p>TechX form!</p>
           </div>
-            <input type="text" name="partid" id="partid" placeholder="name" {...register("name")} className="border p-3"/>
-            <input type="email" name="" id="" placeholder="email" {...register("email")} className="border p-3"/>
-            <input type="text" name="" id="" placeholder="college" {...register("college")} className="border p-3"/>
-            <input type="text" name="" id="" placeholder="dept" {...register("dept")} className="border p-3" />
-            <select name="" id="" {...register("event1")} className="w-full p-3 border">
+            <input type="text" name="partid" id="partid" placeholder="name" {...register("name")} className="border p-3" required/>
+            <input type="email" name="" id="" placeholder="email" {...register("email")} className="border p-3" required/>
+            <input type="text" name="" id="" placeholder="college" {...register("college")} className="border p-3" required/>
+            <input type="text" name="" id="" placeholder="dept" {...register("dept")} className="border p-3" required />
+            <select name="" id="" {...register("event1")} className="w-full p-3 border" required>
             <option value="ev1">ev1</option>
               <option value="ev2">ev2</option>
               <option value="ev1">ev4</option>
               <option value="ev2">ev5</option>
             </select>
-            <select name="" id="" {...register("event2")} className="w-full p-3 border">
+            <select name="" id="" {...register("event2")} className="w-full p-3 border" required>
               <option value="ev1">ev1</option>
               <option value="ev2">ev2</option>
               <option value="ev1">ev4</option>
