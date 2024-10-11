@@ -23,10 +23,8 @@ const Applayout = ()=>{
     try {
       // Post data using Axios
       const response = await axios.post('https://backendtest-3v2v.onrender.com/', data);
-      console.log('Server Response:', response.data);
       alert('Form submitted successfully!');
     }catch (error) {
-      console.error('Error submitting form:', error);
       alert('Form submission failed.');
     }
   }
@@ -52,18 +50,6 @@ const Applayout = ()=>{
             </select>
 
             <button type="submit">Submit</button>
-
-           {
-            data.map((e,index)=>{
-              return(
-                <>
-                  <div key={index}>
-                    <p>{e.college}</p>
-                  </div>
-                </>
-              )
-            })
-           }
           </div>
         </form>
 
