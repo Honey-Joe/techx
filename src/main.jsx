@@ -23,8 +23,10 @@ const Applayout = ()=>{
     try {
       // Post data using Axios
       const response = await axios.post('https://backendtest-3v2v.onrender.com/', data);
+      console.log('Server Response:', response.data);
       alert('Form submitted successfully!');
     }catch (error) {
+      console.error('Error submitting form:', error);
       alert('Form submission failed.');
     }
   }
