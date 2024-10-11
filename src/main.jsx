@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import  ReactDOM  from "react-dom/client";
 import axios from "axios"
 import { useForm } from 'react-hook-form';
-import Dummy from "./dumy/Dummy";
-
+import "./index.css"
 
 
 const Applayout = ()=>{
@@ -33,23 +32,36 @@ const Applayout = ()=>{
 
   return(
     <>
-        <form action="" method="post" onSubmit={handleSubmit(onsubmit)}>
+        <form action="" method="post" onSubmit={handleSubmit(onsubmit)} className="" >
+          <div className="flex justify-center items-center h-screen">
+          <div className="flex flex-col gap-5 justify-center items-center border-2 p-10">
           <div>
-            <input type="text" name="partid" id="partid" placeholder="name" {...register("name")}/>
-            <input type="email" name="" id="" placeholder="email" {...register("email")} />
-            <input type="text" name="" id="" placeholder="college" {...register("college")} />
-            <input type="text" name="" id="" placeholder="dept" {...register("dept")} />
-            <select name="" id="" {...register("event1")}>
-              <option value="ev1">ev1</option>
+            <p>TechX form!</p>
+          </div>
+            <input type="text" name="partid" id="partid" placeholder="name" {...register("name")} className="border p-3"/>
+            <input type="email" name="" id="" placeholder="email" {...register("email")} className="border p-3"/>
+            <input type="text" name="" id="" placeholder="college" {...register("college")} className="border p-3"/>
+            <input type="text" name="" id="" placeholder="dept" {...register("dept")} className="border p-3" />
+            <select name="" id="" {...register("event1")} className="w-full p-3 border">
+            <option value="ev1">ev1</option>
               <option value="ev2">ev2</option>
+              <option value="ev1">ev4</option>
+              <option value="ev2">ev5</option>
             </select>
-            <select name="" id="" {...register("event2")}>
+            <select name="" id="" {...register("event2")} className="w-full p-3 border">
               <option value="ev1">ev1</option>
               <option value="ev2">ev2</option>
+              <option value="ev1">ev4</option>
+              <option value="ev2">ev5</option>
             </select>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className="border rounded-lg px-5 py-2">Submit</button>
           </div>
+
+          </div>
+
+          
+          
         </form>
 
         
