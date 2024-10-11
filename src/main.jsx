@@ -13,8 +13,7 @@ const Applayout = ()=>{
   const [data , setData] = useState([])
   
   const fetchdta = async(data)=>{
-    const data1 = await axios.get("https://backendtest-3v2v.onrender.com/");
-    console.log(data1.data)
+    const data1 = await axios.get("https://backendtest-3v2v.onrender.com");
     setData(data1.data)
     // console.log(data.data);
   }
@@ -22,11 +21,9 @@ const Applayout = ()=>{
   const onsubmit =async (data)=>{
     try {
       // Post data using Axios
-      const response = await axios.post('https://backendtest-3v2v.onrender.com/', data);
-      console.log('Server Response:', response.data);
+      const response = await axios.post('https://backendtest-3v2v.onrender.com', data);
       alert('Form submitted successfully!');
     }catch (error) {
-      console.error('Error submitting form:', error);
       alert('Form submission failed.');
     }
   }
