@@ -7,7 +7,9 @@ import "./index.css"
 
 const Applayout = ()=>{
 
-  const {register , handleSubmit } = useForm()
+  const { reset, register, control, handleSubmit } = useForm({
+    mode: "onChange",
+  });
 
   const [data , setData] = useState([])
   
@@ -18,13 +20,18 @@ const Applayout = ()=>{
   }
 
   const onsubmit =async (data)=>{
+
+    
     try {
       // Post data using Axios
       const response = await axios.post('https://backendtest-3v2v.onrender.com', data);
       alert('Form submitted successfully!');
+      
     }catch (error) {
       alert('Form submission failed.');
     }
+    reset();
+    
   }
   useEffect(()=>{
     fetchdta();
