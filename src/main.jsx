@@ -14,7 +14,7 @@ const Applayout = ()=>{
   const [data , setData] = useState([])
   
   const fetchdta = async(data)=>{
-    const data1 = await axios.get("https://backendtest-3v2v.onrender.com");
+    const data1 = await axios.get("https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz");
     setData(data1.data)
     // console.log(data.data);
   }
